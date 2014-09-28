@@ -1,0 +1,142 @@
+/* pc style
+---------------------------------------*/
+@import "compass";
+
+@media screen and (min-width: 569px){
+  /*components*/
+  .in {
+    width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*layout*/
+  .header {
+    .description {
+      font-size: 12px;
+      float: left;
+      margin: 11px 0 0 8px;
+    }
+    .logo{
+      float:left;
+    }
+    .openMemo {
+      padding-top: 8px;
+      [class*=icon] {
+        margin-top: -4px;
+      }
+    }
+  }
+  .ad {
+    margin:10px;
+    clear: both;
+  }
+  .filterArea {
+    margin-top: 55px;
+    margin-bottom: 13px;
+  }
+  .filterMemo {
+    float: right;
+    @include pie-clearfix();
+    li {
+      float: left;
+      margin-right: 22px;
+      position: relative;
+      cursor: pointer;
+      &:after {
+        content: "|";
+        position: absolute;
+        top: -1px;
+        right: -13px;
+        color: #556677;
+      }
+      &:last-child {
+        margin-right: 0;
+        &:after {
+          content: '';
+        }
+      }
+      &.cur {
+        color: #ccc;
+        cursor: default;
+      }
+    }
+  }
+  .social {
+    padding: 10px 0;
+  }
+  .insertArea {
+    .textInput {
+      width: 278px;
+    }
+    .checkInput {
+      margin-left: 10px;
+    }
+    .checkCell {
+      text-align: left !important;
+    }
+    .btnCell {
+      text-align: right !important;
+    }
+  }
+  .memoDisplayArea {
+    position: absolute;
+    top: 0;
+    left: 350px;
+    li {
+      width: 480px;
+      p {
+        width: 400px;
+      }
+    }
+  }
+  .modal {
+    background-color: rgba(0,0,0,0.8);
+    z-index: 11;
+    top: 0;
+    left: 0;
+    .insertArea {
+      width: 300px;
+      border: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -150px;
+      margin-top: -87px;
+    }
+    .inputArea {
+      > div {
+        text-align: left;
+      }
+    }
+    .textInput {
+      width: 100% !important;
+    }
+    .btnSubmit {
+      @include inline-block();
+    }
+
+    .checkInput {
+      input {
+        @include inline-block();
+      }
+      b {
+        margin-top: 0;
+      }
+    }
+    .pcClose {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      padding: 8px 0 0 10px;
+      cursor: pointer;
+      background-color: #778899;
+      @include box-sizing(border-box);
+      @include border-radius(30px);
+      @include inline-block();
+    }
+  }
+}

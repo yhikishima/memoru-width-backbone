@@ -1,0 +1,96 @@
+/* sp style
+---------------------------------------*/
+@import "compass";
+
+@media screen and (max-width: 568px) {
+  .header {
+    .in {
+      padding: 2px 10px 4px;
+    }
+    .logo{
+      position: absolute;
+      top:10px;
+      left:50%;
+      margin-left:-49px;
+    }
+    .description {
+      display: none;
+    }
+    .openMemo {
+      b {
+        margin-top: 0;
+      }
+    }
+  }
+  .ad {
+    margin: 10px auto;
+  }
+  .filterArea {
+    margin-top: 57px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+  .filterMemo {
+    border: solid 1px #778899;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+    display: table;
+    width: 100%;
+    li {
+      display: table-cell;
+      background-color: #f1f1f1;
+      border-right: solid 1px #778899;
+      text-align: center;
+      padding: 7px 0 7px;;
+      width: 33.3333333333333333%;
+      @include box-sizing(border-box);
+      &:first-child {
+        @include border-radius(4px 0 0 4px);
+      }
+      &:last-child {
+        border-right: none;
+        @include border-radius(0 4px 4px 0);
+      }
+      &.cur,
+      &.tapped {
+        background-color: #fff;
+      }
+    }
+  }
+  .social {
+    padding: 0 0 10px 10px;
+  }
+  .insertArea {
+    display: none;
+  }
+  .memoDisplayArea {
+    margin: 15px 10px 0;
+  }
+  .modal {
+    background-color: #f1f1f1;
+    z-index: 10;
+    left: 0;
+    top: 40px;
+    padding: 10px;
+    .insertArea,
+    .textInput {
+      width: 100% !important;
+      display: block;
+    }
+    .btnSubmit {
+      @include inline-block();
+    }
+
+    .checkInput {
+      input {
+        @include inline-block();
+      }
+      b {
+        margin-top: 0;
+      }
+    }
+    .pcClose {
+      display: none;
+    }
+  }
+}

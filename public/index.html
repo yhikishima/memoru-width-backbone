@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>MemoRu | 登録なしですぐにメモれるWebメモアプリ</title>
+  <meta name="keywords" content="MemoRu,パソコン,PC,スマートフォン,SP,iOS,Andorid,Mac,Windows,メモる,メモ,memo,Webメモ,付箋,ポストイット,タスク管理,ToDo管理,タスク,ToDo">
+  <meta name="description" content="MemoRuは登録なしでPC/パソコンやスマートフォンで、すぐにメモが作れるWebメモアプリです">
+  <!--[if lt IE 9]>
+  <script src="./js/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="./css/style.css?b" media="all">
+  <meta property="og:title" content="MemoRu | 登録なしですぐにメモれるWebメモアプリ" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="MemoRuは登録なしでPC/パソコンやスマートフォンで、すぐにメモが作れるWebメモアプリです" />
+  <meta property="og:url" content="http://bootgraph.com/memoru/" />
+  <meta property="og:image" content="img/ogp.png" />
+  <meta property="og:site_name" content="MemoRu | 登録なしですぐにメモれるWebメモアプリ" />
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="in">
+      <a href="./"><h1 class="logo">MemoRu</h1></a>
+      <p class="description">登録なしですぐにメモれるWebメモアプリ</p>
+      <!-- <p class="author"><a href="http://bootgraph.com/">Bootgraph.com</a></p> -->
+      <p class="openMemo" id="modalTrigger"><i class="iconPlus"></i><b>メモる</b></p>
+    </div>
+  </header>
+
+  <div class="in filterArea jsContent">
+    <ul class="filterMemo" id="filterTrigger">
+      <li class="jsTap cur" id="displayMemoAll">すべて</li>
+      <li class="jsTap" id="displayMemoUsually">通常</li>
+      <li class="jsTap" id="displayMemoImportant">重要</li>
+    </ul>
+  </div>
+
+  <div class="in content jsContent">
+    <ul class="memoDisplayArea jsContent" id="memoDisplayArea">
+<!--       <li class="importantMemo" id="id0">
+        <p class="textMemo" title="メモ編集したい場合はここをクリック！">hogeのなにかです。hogeのなにかです。hogeのなにかです。hogeのなにかです。hogeのなにかです。</p>
+        <textarea class="textCorrection hide">hogeのなにかです。hogeのなにかです。hogeのなにかです。hogeのなにかです。hogeのなにかです。
+        </textarea>
+        <time>[No0]2013/1/31&nbsp;12:12</time>
+        <i class="iconDelete jsDelete"></i>
+      </li> -->
+    </ul>
+
+    <div class="insertArea">
+      <textarea class="textInput" id="pcInsertMemo" placeholder="メモる！"></textarea>
+      <div class="inputArea">
+        <div class="checkCell"><label class="checkInput"><input type="checkbox" id="pcImportantCheck"><b>重要</b></label></div>
+        <div class="btnCell"><button class="btnSubmit" id="pcBtnSubmit">メモる！</button></div>
+      </div>
+    </div>
+
+    <!-- nend -->
+    <div class="ad">
+      <script type="text/javascript">
+      var nend_params = {"media":13419,"site":66081,"spot":147420,"type":1,"oriented":1};
+      </script>
+    </div>
+    <!-- nend -->
+
+    <ul class="social">
+      <li>
+        <div class="fb-like" data-href="http://bootgraph.com/memoru/" data-send="false" data-layout="button_count" data-width="120" data-show-faces="true" data-font="arial"></div>
+      </li>
+      <li>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://bootgraph.com/memoru/" data-text="Memoru | 登録なしですぐにメモれるWebメモアプリ" data-lang="en">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      </li>
+      <li class="google"><div class="g-plusone" data-size="medium"></div>
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+      </li>
+    </ul>
+
+    <div class="hide">
+    ID：<input type="text" id="usrIdInput"><br>
+    PASS：<input type="password" id="passInput">
+    <p class="usrIdCreate" id="usrIdCreate">ユーザidを登録</p>
+    </div>
+  </div>
+
+  <div class="modal hide" id="modal">
+    <div class="insertArea">
+      <textarea class="textInput" id="modalInsertMemo" placeholder="メモる！"></textarea>
+      <div class="inputArea">
+        <div><label class="checkInput"><input type="checkbox" id="modalImportantCheck"><b>重要</b></label></div>
+        <div><button class="btnSubmit" id="modalBtnSubmit">メモる！</button></div>
+      </div>
+      <span class="pcClose" id="pcModalClose">×</span>
+    </div>
+  </div>
+
+  <script src="./js/memoru.js?g"></script>
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44462631-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+
+  <script type="text/javascript" src="http://js1.nend.net/js/nendAdLoader.js"></script>
+
+</body>
+</html>
